@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Encriptador de texto</title>
+
+    <link rel="stylesheet" href="style.css"> 
+
+    
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="Logo de Alura" class="logo"> <!--Logo-->
+    </header>
+
+    <main>
+        <section id="zonaEncriptar"> <!--Seccion de ingresar texto y botones-->
+            <textarea class="text-area" cols="40" rows="8" placeholder="Ingrese el texto aqui" autofocus></textarea> <!--Text area para ingresar el texto a encriptar-->
+            <div>
+                <img src="assets/bi_exclamation-circle-fill.png" alt="" class="exclamacion">
+                <h6 class="informacion">Solo letras minúsculas y sin acentos.</h6>
+            </div>
+
+            <div class="botones"> <!--div para botones encriptar y desencriptar-->
+
+                <button class="btn-encriptar" onclick="btnEncriptar(); mostrarBtnCopiar()">
+                    Encriptar
+                </button>
+                <button class="btn-desencriptar" onclick="btnDesencriptar(); mostrarBtnCopiar()">
+                    Desencriptar
+                </button>
+
+            </div>
+
+        </section>
+            
+        <section id="zonaTexto"> <!--Seccion de texto encriptado y boton copiar-->
+
+            <div>
+                <textarea class="mensaje" id="mensajeid" cols="25" rows="9" readonly></textarea> <!--Text area para mostrar texto encriptado-->
+                <!--readonly permite que el usuario pueda seleccionar y clickar dentro del elemento pero no introducir datos-->
+            </div>
+
+            <div>
+                <button class="btn-copiar" id="copiar-btn" onclick="copyToClipBoard()">Copiar</button>
+                
+                <p id="mensaje-no-encontrado">
+                    Ningún mensaje fue encontrado
+                </p>
+                <p id="mensaje-ingresa">
+                    Ingresa el texto que desees encriptar o desencriptar.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+            Desarrollado por: Pamela Alcantara 
+    </footer>
+
+
+    <script src="main.js"></script> <!--Linea para cargar los scripts de la página-->
+
+</body>
+
+</html>
